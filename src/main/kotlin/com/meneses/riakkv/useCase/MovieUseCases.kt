@@ -97,7 +97,7 @@ class MovieUseCases(
         println("Was deleted: $wasDeleted")
     }
 
-    fun updateMovie() = with(repository) {
+    fun updateMovieRatings() = with(repository) {
         val movie = getMovie("Planet of the Apes")!!
         val ratingsString = "[ {\"Source\":\"Internet Movie Database\",\"Value\":\"7.5/10\"}, {\"Source\":\"Rotten Tomatoes\",\"Value\":\"56%\"}, {\"Source\":\"Metacritic\",\"Value\":\"60/100\"} ]"
         val ratings = Json.decodeFromString<List<Rating>>(ratingsString)

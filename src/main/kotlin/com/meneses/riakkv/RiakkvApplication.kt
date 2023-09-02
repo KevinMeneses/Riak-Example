@@ -33,7 +33,7 @@ fun main(args: Array<String>) {
         deleteMovie()
 
         println("\nExercise 6")
-        updateMovie()
+        updateMovieRatings()
 
         println("\nExercise 7")
         getDirectorsWithTotalMoviesCosts()
