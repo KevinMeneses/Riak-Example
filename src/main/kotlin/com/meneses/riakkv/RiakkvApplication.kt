@@ -1,7 +1,7 @@
 package com.meneses.riakkv
 
 import com.meneses.riakkv.repository.MovieRepository
-import com.meneses.riakkv.useCase.MovieUseCases
+import com.meneses.riakkv.service.MovieService
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
     val repository = MovieRepository()
         .apply { connect() }
 
-    MovieUseCases(repository).run {
+    MovieService(repository).run {
         println("\nExercise 1")
         populateDataBase()
 

@@ -1,4 +1,4 @@
-package com.meneses.riakkv.useCase
+package com.meneses.riakkv.service
 
 import com.meneses.riakkv.model.Rating
 import com.meneses.riakkv.repository.MovieRepository
@@ -8,7 +8,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import java.lang.NullPointerException
 
-class MovieUseCases(
+class MovieService(
     private val repository: MovieRepository
 ) {
     fun populateDataBase() = with(repository) {
